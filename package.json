@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "cd puhelinluettelo && npm run build && xcopy /E /Y /I build C:\\Users\\Dan\\VSC\\Dan_FSO2023\\OSA3\\puhelinluettelo3\\build",
-    "deploy:full": "npm run build:ui && git add . && git commit -m  && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m scriptcommit  && git push"
   },
   "author": "",
   "license": "ISC",
