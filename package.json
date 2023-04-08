@@ -1,0 +1,23 @@
+{
+  "name": "osa3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "cd puhelinluettelo && npm run build && xcopy /E /Y /I build C:\\Users\\Dan\\VSC\\Dan_FSO2023\\OSA3\\puhelinluettelo3\\build",
+    "deploy:full": "npm run build:ui && git add . && git commit -m  && git push"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
