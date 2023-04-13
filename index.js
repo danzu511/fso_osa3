@@ -20,18 +20,6 @@ morgan.token('body', function getBody(req){
     }
 })
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
-let people = JSON.parse(fs.readFileSync('./db.json', 'utf8'))
-console.log(people)
-
-const generateId = () => {
-    const newId = Math.round(Math.random()*(5000))
-    console.log(`Generated id ${newId}`)    
-    if(people.find(person => person.id === newId)){
-        console.log(`Id ${newId} is already taken, creating new`)
-        generateId()
-    }
-    return newId
-}
 
 app.get('/api/persons',(req, res) => {
     console.log('Getting all people')
