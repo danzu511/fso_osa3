@@ -8,7 +8,8 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "cd puhelinluettelo && npm run build && xcopy /E /Y /I build C:\\Users\\Dan\\VSC\\Dan_FSO2023\\OSA3\\puhelinluettelo3\\build",
-    "deploy:full": "npm run build:ui && git add . && git commit -m scriptcommit  && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m scriptcommit  && git push",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,12 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
     "nodemon": "^2.0.22"
   }
 }
